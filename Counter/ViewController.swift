@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    var сount: Int = 0
+    @IBOutlet weak var countButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        countButton.tintColor = .orange
+        numberLabel.tintColor = .white
+
     }
+    @IBAction func buttonDidTap(_ sender: Any) {
+        print("tap")
+        сount += 1
+        print(сount)
+        numberLabel.text = "Значение счетчика: \n\(сount)"
+        }
+    }
+    
+    
 
-
-}
 
